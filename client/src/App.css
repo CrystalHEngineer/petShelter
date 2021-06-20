@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+.App {
+  max-width: 800px;
+  margin: auto;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.headTable {
+  width: 100%;
+}
+
+table {
+  border-collapse: collapse;
+  margin: 20px 10px;
+} 
+
+.detailssect {
+  border: 3px solid black;
+}
+
+th {
+  padding: 12px 0px;
+  color: white;
+  background-color: gray;
+  
+} 
+
+td, th {
+  border: 1px solid black;
+  padding: 10px;
+} 
+
+tr:nth-child(even) {
+  background-color: #cfcfcf;
+} 
+
+tr:hover {
+  background-color: #8a8a8a;
+}
+
+#wrapper 
+{
+    margin: 0px auto;
+    font-family: sans-serif;
+}
+
+#header
+{
+    display: inline-block;   
+}
+
+.form 
+{
+    display: inline-block;
+    border: 5px solid black;
+    width: 700px;
+    text-align: center;
+    vertical-align: top;
+    margin: 25px;
+}
+
+input
+{
+    display: block;
+}
+
+.submit
+{
+    margin: 15px 0px 25px 215px;
+}
+
+#messages
+{
+    background-color: red;
+    color: black;
+    padding: 15px;
+}
+
+#messages li
+{
+    display: inline-block;
+    margin: 10px;
+}
+
+.content
+{
+    display: inline-block;
+    border: 5px solid black;
+    vertical-align: top;
+    padding: 25px;
+}
+
+.AdoptButton {
+  color: white;
+  background-color: #cf2a27;
+  margin-left: 375px;
+}
+
+.detailsheader {
+  display: inline-block;
+  
+}
+
+.linkspace {
+  margin-left: 500px;
+}
+
+.secondheader {
+  display: inline-block;
+}
+
+/* .outline {
+  display: inline-block;
+  background: white;
+  height: 275px;
+  width: 347px;
+  margin: 0em auto 10em;
+  outline: 2px solid black;
+}  */
+
+.type {
+  display: inline-block;
+  padding: 5px;
+}
+
+.description {
+  display: inline-block;
+  padding: 5px;
+}
+
+.skill {
+  display: inline-block;
+  padding: 5px;
+}
+
+.top {
+  vertical-align: top;
+}
+
+.pic {
+  max-height: 400px;
+  max-width: 400px;
+  margin: 20px;
+  border: 5px solid black;
+}
+
+.skillheaders {
+  display: block;
+}
+
+.container {
+  border-color: black;
+  border-radius: 10%;
+}
+
+.new {
+  display: inline-block;
+}
+
+.addpetbutton {
+  color: white;
+  background-color: #2b78e4;
+  width: 100px;
+}
+
+.edit {
+  display: inline;
+}
+
+.box1 {
+  display: inline-block;
+  width: 50%;
+}
+
+.homepage {
+  margin-left: 400px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Lato', sans-serif;
+}
+
+
+.home, .dashboard, .submit {
+  display: flex;
+  height: 90vh;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+}
