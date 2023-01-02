@@ -1,14 +1,12 @@
 import React, {useState, useEffect} from 'react';
-import {Link, navigate} from '@reach/router';
+import {Link, Redirect} from 'react-router-dom';
 import axios from 'axios';
 
 const Edit = (props) => {
     const [name, setName] = useState("");
     const [type, setType] = useState("");
     const [description, setDescription] = useState("");
-    const [skill1, setSkill1] = useState("");
-    const [skill2, setSkill2] = useState("");
-    const [skill3, setSkill3] = useState("");
+    const [skill, setSkill] = useState("");
     const [errs, setErrs] = useState({});
     const [image, setImage] = useState("");
 
@@ -17,7 +15,7 @@ const Edit = (props) => {
 
 
     useEffect(() => {
-        axios.get('http://localhost:8000/pet/' + props.id)
+        axios.get('http://localhost:8000/pet/' + props.match.params.id)
             .then((res) => {
                 console.log(res.data);
 
@@ -26,9 +24,7 @@ const Edit = (props) => {
                 setName(pet.name);
                 setType(pet.type);
                 setDescription(pet.description);
-                setSkill1(pet.skill1);
-                setSkill2(pet.skill2);
-                setSkill3(pet.skill3);
+                setSkill(pet.skill);
                 setImage(pet.image);
             })
             .catch((err) => {
@@ -40,13 +36,11 @@ const Edit = (props) => {
     const submitHandler = (e) => {
         e.preventDefault();
 
-        axios.put("http://localhost:8000/pet/" + props.id, {
+        axios.put("http://localhost:8000/pet/" + props.match.params.id, {
             name: name,
             type: type,
             description: description,
-            skill1: skill1,
-            skill2: skill2,
-            skill3, skill3,
+            skill: skill,
             image: image
         })
             .then((res) => {
@@ -56,7 +50,7 @@ const Edit = (props) => {
                 }
                 else{
                     console.log(res.data);
-                    navigate("/pet/" + props.id);
+                    return <Redirect to={`/pet/${pet.id}`} />
                 }
             })
     }
@@ -64,7 +58,7 @@ const Edit = (props) => {
     return (
         <div>
             <h1 className="detailsheader">Pet Shelter</h1>
-            <Link to={`/pet`} classname="detailsheader" className="linkspace">back to home</Link>
+            <Link to={`/pet`} className="linkspace">back to home</Link>
             <h2>Edit {pet.name}</h2>
             <form onSubmit={submitHandler}>
                 <div className="box1">
@@ -121,38 +115,14 @@ const Edit = (props) => {
                 <div className="box1">
                     <div>
                         <h6>Skills (Optional:)</h6>
-                        <label className="skillheaders">Skill 1: </label>
+                        <label className="skillheaders">Skills: </label>
                         <input type="text"
-                            name="skill1"
-                            value={skill1}
-                            onChange={(e) => setSkill1 (e.target.value)} />
+                            name="skill"
+                            value={skill}
+                            onChange={(e) => setSkill (e.target.value)} />
                             {
-                                errs.skill1 ? 
-                                    <span>{errs.skill1.message}</span>
-                                    :null
-                            }
-                    </div>
-                    <div>
-                        <label className="skillheaders">Skill 2: </label>
-                        <input type="text"
-                            name="skill2"
-                            value={skill2}
-                            onChange={(e) => setSkill2 (e.target.value)} />
-                            {
-                                errs.skill2 ? 
-                                    <span>{errs.skill2.message}</span>
-                                    :null
-                            }
-                    </div>
-                    <div>
-                        <label className="skillheaders">Skill 3: </label>
-                        <input type="text"
-                            name="skill3"
-                            value={skill3}
-                            onChange={(e) => setSkill3 (e.target.value)} />
-                            {
-                                errs.skill3 ? 
-                                    <span>{errs.skill3.message}</span>
+                                errs.skill ? 
+                                    <span>{errs.skill.message}</span>
                                     :null
                             }
                     </div>

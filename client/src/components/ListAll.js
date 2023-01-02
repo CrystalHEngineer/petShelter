@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import {Link, navigate} from '@reach/router';
+import {Link} from 'react-router-dom';
 import axios from 'axios';
 
 
@@ -30,15 +30,16 @@ const ListAll = (props) => {
 
     return (
         <div>
-            <h1 className="detailsheader">Pet Shelter</h1>
-            <Link to={`/pet/new`} className="detailsheader" className="homepage">add a pet to the shelter</Link>
-            <h2>These pets are looking for a good home</h2>
+            <Link to={`/pet/addpet`} className="homepage">add a pet to the shelter</Link>
+            <h2 className="dashHeader">These pets are looking for a family.</h2>
             <div>
                 <table className="headTable">
                     <thead>
-                        <th>Name</th>
-                        <th>Type</th>
-                        <th>Actions</th>
+                        <tr>
+                            <th>Name</th>
+                            <th>Type</th>
+                            <th>Actions</th>
+                        </tr>
                     </thead>
                     <tbody>
                         {
@@ -62,5 +63,18 @@ const ListAll = (props) => {
         </div>
     )
 };
+
+<div className="body">
+            <div className="container">
+                <div className="background"></div>
+                <div className="content-area">
+                    <div>
+                        <h1 className="welcomeHeader">Welcome to A Pawfect Life</h1>
+                        <h2 className="welcomeDescription">Our mission is to provide animals with the best care until they are adopted by their forever family.</h2>
+                        <Link to={`/pet`} className="dashboardButton">Dashboard</Link>
+                    </div>
+                </div>
+            </div>
+        </div>
 
 export default ListAll;

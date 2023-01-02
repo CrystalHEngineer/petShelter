@@ -16,8 +16,8 @@ export const SidebarData = [
         className: 'nav-text'
     },
     {
-        title: 'Submit',
-        path: '/pet/submit',
+        title: 'AddPet',
+        path: '/pet/addpet',
         icon: <FaIcons.FaPlus />,
         className: 'nav-text'
     },
@@ -29,7 +29,7 @@ export const SidebarData = [
     },
     {
         title: 'Contact Us',
-        path: '/contact',
+        path: '/pet/contact',
         icon: <FaIcons.FaPhoneAlt />,
         className: 'nav-text'
     }

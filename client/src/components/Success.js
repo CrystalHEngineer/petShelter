@@ -7,8 +7,9 @@ function Success() {
   const [response, setResponse] = React.useState(null)
 
   const containerStyle = {
-    width: '800px',
-    height: '800px'
+    width: '500px',
+    height: '500px',
+    margin: '0 auto'
   };
   
   const directionsCallback = React.useCallback((res) => {
@@ -57,7 +58,7 @@ function Success() {
       >
         { /* Child components, such as markers, info windows, etc. */ }
         <DirectionsService callback={directionsCallback} options={directionsOption} />
-        {/* <Marker position={center}></Marker> */}
+        <Marker position={center}></Marker>
         {response !== null && (
             <DirectionsRenderer options={directionsRendererOptions} />
           )}

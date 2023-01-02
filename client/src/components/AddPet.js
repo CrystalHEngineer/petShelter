@@ -1,17 +1,15 @@
 import React, {useState} from 'react';
-import {Link, navigate} from '@reach/router';
+import {Link, Redirect} from 'react-router-dom';
 import axios from 'axios';
 
-const New = (props) => {
+const AddPet = (props) => {
     const [name, setName] = useState("");
     const [type, setType] = useState("");
     const [description, setDescription] = useState("");
-    const [skill1, setSkill1] = useState("");
-    const [skill2, setSkill2] = useState("");
-    const [skill3, setSkill3] = useState("");
+    const [skill, setSkill] = useState("");
     const [errs, setErrs] = useState({});
     const [image, setImage] = useState("");
-
+    console.log("Trying to show new.")
     
 
     const submitHandler = (e) => {
@@ -23,9 +21,7 @@ const New = (props) => {
             name: name,
             type: type,
             description: description,
-            skill1: skill1,
-            skill2: skill2,
-            skill3, skill3,
+            skill: skill,
             image: image
         })
             .then((res) => {
@@ -35,7 +31,7 @@ const New = (props) => {
                 }
                 else {
                     console.log(res.data)
-                    navigate("/pet");
+                    return (<Redirect to="/pet" />)
                 }
             })
             .catch((err) => {
@@ -46,7 +42,7 @@ const New = (props) => {
     return (
         <div>
             <h1 className="detailsheader">Pet Shelter</h1>
-            <Link to={`/pet`} classname="detailsheader" className="linkspace">back to home</Link>
+            <Link to={`/pet`} className="linkspace">back to home</Link>
             <h2>Know a pet needing a home?</h2>
             <form onSubmit={submitHandler}>
                 <div>
@@ -64,7 +60,7 @@ const New = (props) => {
                                     }
                         </div>
                         <div>
-                            <label>Pet type: </label>
+                            <label>Pet Type: </label>
                                 <input type="text"
                                     name="type"
                                     value={type}
@@ -103,39 +99,14 @@ const New = (props) => {
                     </div>
                     <div className="new">
                         <div>
-                            <h6>Skills (Optional:)</h6>
-                            <label>Skill 1: </label>
+                            <label>Skills (Optional): </label>
                             <input type="text"
                                 name="skill1"
-                                value={skill1}
-                                onChange={(e) => setSkill1 (e.target.value)} />
+                                value={skill}
+                                onChange={(e) => setSkill (e.target.value)} />
                                 {
                                     errs.skill1 ? 
                                         <span>{errs.skill1.message}</span>
-                                        :null
-                                }
-                        </div>
-                        <div>
-                            <label>Skill 2: </label>
-                            <input type="text"
-                                name="skill2"
-                                value={skill2}
-                                onChange={(e) => setSkill2 (e.target.value)} />
-                                {
-                                    errs.skill2 ? 
-                                        <span>{errs.skill2.message}</span>
-                                        :null
-                                }
-                        </div>
-                        <div>
-                            <label>Skill 3: </label>
-                            <input type="text"
-                                name="skill3"
-                                value={skill3}
-                                onChange={(e) => setSkill3 (e.target.value)} />
-                                {
-                                    errs.skill3 ? 
-                                        <span>{errs.skill3.message}</span>
                                         :null
                                 }
                         </div>
@@ -149,4 +120,4 @@ const New = (props) => {
     )
 };
 
-export default New;
+export default AddPet;

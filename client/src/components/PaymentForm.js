@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import {CardElement, useElements, useStripe} from "@stripe/react-stripe-js"
 import axios from "axios"
-import {Link, navigate} from '@reach/router';
+import {Link, Redirect} from 'react-router-dom';
 import Success from './Success';
 
 const CARD_OPTIONS = {
@@ -28,6 +28,7 @@ export default function PaymentForm(){
     const [success, setSuccess] = useState(false)
     const stripe = useStripe()
     const elements = useElements()
+    
 
 
     const handleSubmit = async(e) => {
@@ -66,6 +67,7 @@ export default function PaymentForm(){
         <form onSubmit={handleSubmit}>
             <fieldset className="FormGroup">
                 <div className="FormRow">
+
                     <CardElement options={CARD_OPTIONS}/>
                 </div>
             </fieldset>
@@ -73,7 +75,7 @@ export default function PaymentForm(){
         </form>
         :
         <div>
-            <Success />
+            <Redirect to='/pet/success' />
         </div>
         }
         </>
