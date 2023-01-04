@@ -18,10 +18,8 @@
         "url": "https://github.com/CrystalHEngineer/petShelter/issues"
     },
     "homepage": "https://github.com/CrystalHEngineer/petShelter/issues",
-    "devDependencies": {
-        "concurrently": "^7.6.0"
-    },
     "dependencies": {
-        "nodemon": "^2.0.20"
+        "nodemon": "^2.0.20",
+        "concurrently": "^7.6.0"
     }
 }

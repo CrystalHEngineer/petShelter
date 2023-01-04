@@ -30,7 +30,7 @@ const ListAll = (props) => {
 
     return (
         <div className="listAllPage">
-            <Link to={`/pet/addpet`} className="homepage">add a pet to the shelter</Link>
+            <Link to={`/pet/addpet`} className="homepage"><button class="add-pet">Add A Pet</button></Link>
             <h2 className="dashHeader">These pets are looking for a family.</h2>
             <div>
 
