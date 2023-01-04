@@ -4,7 +4,9 @@
     "description": "",
     "scripts": {
         "test": "echo \"No test specified\" && exit 1",
-        "start": "node server.js"
+        "start": "node server.js",
+        "client": "cd client && npm start",
+        "dev": "concurrently \"node server.js\" \"npm run client\""
     },
     "repository": {
         "type": "git",
@@ -15,5 +17,8 @@
     "bugs": {
         "url": "https://github.com/CrystalHEngineer/petShelter/issues"
     },
-    "homepage": "https://github.com/CrystalHEngineer/petShelter/issues"
+    "homepage": "https://github.com/CrystalHEngineer/petShelter/issues",
+    "devDependencies": {
+        "concurrently": "^7.6.0"
+    }
 }
