@@ -4,9 +4,9 @@
     "description": "",
     "scripts": {
         "test": "echo \"No test specified\" && exit 1",
-        "start": "node server.js",
+        "start": "cd server && nodemon server.js",
         "client": "cd client && npm start",
-        "dev": "concurrently \"node server.js\" \"npm run client\""
+        "dev": "concurrently \"nodemon server.js\" \"npm run client\""
     },
     "repository": {
         "type": "git",
@@ -20,5 +20,8 @@
     "homepage": "https://github.com/CrystalHEngineer/petShelter/issues",
     "devDependencies": {
         "concurrently": "^7.6.0"
+    },
+    "dependencies": {
+        "nodemon": "^2.0.20"
     }
 }
