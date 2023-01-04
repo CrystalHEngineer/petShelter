@@ -29,36 +29,29 @@ const ListAll = (props) => {
     // }
 
     return (
-        <div>
+        <div className="listAllPage">
             <Link to={`/pet/addpet`} className="homepage">add a pet to the shelter</Link>
             <h2 className="dashHeader">These pets are looking for a family.</h2>
             <div>
-                <table className="headTable">
-                    <thead>
-                        <tr>
-                            <th>Name</th>
-                            <th>Type</th>
-                            <th>Actions</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {
-                            allPets.map((pet, index) => (
-                                <tr key={index}>
-                                    <td>
-                                        {pet.name}
-                                    </td>
-                                    <td>
-                                        {pet.type}
-                                    </td>
-                                    <td>
-                                        <Link to={`/pet/${pet._id}`}>Details</Link> | <Link to={`/pet/${pet._id}/edit`}>Edit</Link> 
-                                    </td>
-                                </tr>
-                            ))
-                        }
-                    </tbody>
-                </table>
+
+                <div class="grid">
+                    
+                    {
+                        allPets.map((pet, index) => (
+                            <div class="grid-item" key={index}>
+                                <div class="card">
+                                    <img src={pet.image} class="card-img" />
+                                    <div class="card-content">
+                                        <h1 class="card-header">{pet.name}</h1>
+                                        <Link to={`/pet/${pet._id}`}><button class="card-btn">Details</button></Link>   <Link to={`/pet/${pet._id}/edit`}><button class="card-btn">Edit</button></Link> 
+                                    </div>
+                                </div>
+                            </div>
+                        ))
+                    }
+                        
+                    
+                </div>
             </div>
         </div>
     )
