@@ -19,7 +19,8 @@
     },
     "homepage": "https://github.com/CrystalHEngineer/petShelter/issues",
     "dependencies": {
-        "nodemon": "^2.0.20",
-        "concurrently": "^7.6.0"
+        "-": "^0.0.1",
+        "concurrently": "^7.6.0",
+        "nodemon": "^2.0.20"
     }
 }

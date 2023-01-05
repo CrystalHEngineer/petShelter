@@ -29,30 +29,34 @@ const ListAll = (props) => {
     // }
 
     return (
-        <div className="listAllPage">
-            <Link to={`/pet/addpet`} className="homepage"><button class="add-pet">Add A Pet</button></Link>
-            <h2 className="dashHeader">These pets are looking for a family.</h2>
-            <div>
+        <div>
+            <section>
+                <div className="container">
+                    <div className="listAllPage">
+                        <Link to={`/pet/addpet`} className="homepage"><button class="add-pet">Add A Pet</button></Link>
+                        <h2 className="dashHeader">These pets are looking for a family.</h2>
 
-                <div class="grid">
+                            <div class="grid">
                     
-                    {
-                        allPets.map((pet, index) => (
-                            <div class="grid-item" key={index}>
-                                <div class="card">
-                                    <img src={pet.image} class="card-img" />
-                                    <div class="card-content">
-                                        <h1 class="card-header">{pet.name}</h1>
-                                        <Link to={`/pet/${pet._id}`}><button class="card-btn">Details</button></Link>   <Link to={`/pet/${pet._id}/edit`}><button class="card-btn">Edit</button></Link> 
-                                    </div>
-                                </div>
-                            </div>
-                        ))
-                    }
+                                {
+                                    allPets.map((pet, index) => (
+                                        <div class="grid-item" key={index}>
+                                            <div class="card">
+                                                <img src={pet.image} class="card-img" />
+                                                <div class="card-content">
+                                                    <h1 class="card-header">{pet.name}</h1>
+                                                    <Link to={`/pet/${pet._id}`}><button class="card-btn details">Details</button></Link>   <Link to={`/pet/${pet._id}/edit`}><button class="card-btn">Edit</button></Link> 
+                                                </div>
+                                            </div>
+                                        </div>
+                                    ))
+                                }
                         
                     
+                            </div>
+                    </div>
                 </div>
-            </div>
+            </section>
         </div>
     )
 };
@@ -69,5 +73,6 @@ const ListAll = (props) => {
                 </div>
             </div>
         </div>
+
 
 export default ListAll;
