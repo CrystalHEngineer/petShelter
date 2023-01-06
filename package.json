@@ -7,7 +7,6 @@
         "start": "concurrently \"nodemon server/server.js\" \"cd client && npm start\"",
         "client": "cd client && npm start",
         "dev": "concurrently \"nodemon server/server.js\" \"cd client && npm start\"",
-        "build": "tsc",
         "postinstall": "npm run build"
     },
     "repository": {
