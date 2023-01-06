@@ -3,13 +3,14 @@
     background-color: #060b26;
     color: white;
     display: flex;
-    height: 80px;
+    height: 8rem;
     justify-content: start;
     text-align: right;
 }
 
 .title {
-    margin-left: 20px;
+    font-size: 3.5rem;
+    margin-left: 5rem;
 }
 
 .menu-bars {
@@ -43,7 +44,7 @@
     align-items: center;
     padding: 8px 0px 8px 16px;
     list-style: none;
-    height: 60px;
+    height: 6rem;
 }
 
 .nav-text a {
@@ -76,6 +77,11 @@
     position: absolute;
     width: 100%;
     z-index: 2;
+}
+
+.pawIcon {
+    font-size: 5rem;
+    margin-left: 1rem;
 }
 
 span {

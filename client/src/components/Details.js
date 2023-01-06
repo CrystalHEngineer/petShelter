@@ -48,33 +48,27 @@ const Details = (props) => {
     // }
 
     return  (
-
+        <section>
         <div className="container">
-            <div className="boxDetails">
-                <div className="pet">
-                    <div>
-                    <h2 className="secondheader">Hi! My name is: {pet.name}</h2>
-                        <p className="image">Photo of {pet.name}</p>
-                        <img className="pic" src={pet.image}/>
-                    </div>
-                </div>
-                <div className="pet">
-                    <div className="petDetails">
-                        <div>
-                            <p className="type">Skills: {pet.skill} </p>
-                        </div>
-                        <div>
-                            <p className="type">Pet Type: {pet.type}</p>
-                        </div>
-                        <div>
-                            <p className="type">Description: {pet.description}</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <Link  className="AdoptButton" to={`/pet/${pet._id}/payment`}>Adopt {pet.name}</Link>
-        </div>
 
+            <div className="boxDetails">
+
+                    
+
+
+                    <div className="petDetails">
+                        <img className="detailsPic" src={pet.image}/>
+                        <h2 className="detailsHeader">Hi! My name is {pet.name}</h2>
+                        <p className="detailsDescription">{pet.description}</p> 
+                        <Link   to={`/pet/${pet._id}/payment`}><button className="adoptBtn">Adopt {pet.name}</button></Link>
+                    </div>
+                    
+
+                </div>
+
+
+            </div>
+        </section>
         
     )
 };

@@ -9,18 +9,72 @@
 
 
 
+
+
+/* ------ DETAILS ------ */
+
+.adoptBtn {
+  background-color: #FDFEFF;
+  border: .2rem solid;
+  border-radius: 0.4rem;
+  color: #fd585c;
+  font-family: inherit;
+  font-weight: bold;
+  font-size: .8rem;
+  padding: .5rem;
+  transition: .2s;
+  width: 7rem;
+  margin-left: 28rem;
+  margin-top: 18rem;
+}
+
+.adoptBtn:hover {
+  background-color: #fd585c;
+  border-color: #fd585c;
+  color: white;
+}
+
+.boxDetails {
+  
+  display: flex;
+  border-radius: 0.4rem;
+  box-shadow: 4rem 4rem 4rem rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  height: 38rem;
+  margin-top: 2rem;
+  transition: 0.2s;
+  width: 70rem;
+}
+
+.boxDetails:hover {
+  transform: translateY(-0.5%);
+  box-shadow: 0 4rem 8rem rgba(0, 0, 0, 0.5);
+}
+
+
+.detailsDescription {
+  font-size: 1.5rem;
+  margin-left: 3rem;
+  margin-top: 5rem;
+} 
+
+.detailsHeader {
+  font-size: 3rem;
+  margin-left: 1.5rem;
+  margin-top: 4.5rem;
+}
+
+.detailsPic {
+  margin-left: 2rem;
+  max-height: 30rem;
+  margin-top: 4.5rem;
+  max-width: 32rem;
+}
+
+
+
 /* -------HOME-------- */
 
-
-.backgroundImage {
-  background-image: url('assets/dog.jpg');
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  /* filter: blur(2px); */
-  height: 100vh;
-  width: 100%;
-  z-index: 1;
-}
 
 .buttonContainer {
   padding: 4rem;
@@ -34,34 +88,68 @@
   font-size: 1.7rem;
   margin: 1rem;
   border: 4px solid;
-  color: #fd585c;
-  background-color: #FDFEFF;
+  color: #FDFEFF;
+  background-color: #fd585c;
   border-radius: 0.4rem;
   transition: .2s;
   width: 15rem;
 }
 
 .dashboardButton:hover {
-  background-color: #fd585c;
-  color: white;
+  background-color: #FDFEFF;
+  color: #fd585c;
+}
+
+.welcome {
+  background-image: url('assets/dog.jpg');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  backdrop-filter: blur(2px);
+  height: 100vh;
+  position: relative;
+  text-align: center;
+  width: 100%;
+}
+
+.welcome:before {
+  content: "";
+  position: absolute;
+  width : 100%;
+  height: 100vh;
+  background: inherit;
+  z-index: -1;
+  top: 0;
+  left: 0;
+
+
+  filter        : blur(1.5px);
+  -moz-filter   : blur(1.5px);
+  -webkit-filter: blur(1.5px);
+  -o-filter     : blur(1.5px);
+
+}
+
+.welcome-hs {
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -40%);
+  top: 45%;
 }
 
 
 .welcomeHeader {
-  color: #fd585c;
-  font-size: 6rem;
-  padding-top: 6rem;
-  text-align: center;
+  color:  #fd585c;
+  font-size: 4rem;
 } 
 
 
 .welcomeDescription {
   color: #FDFEFF;
-  font-size: 1.5rem;
-  font-weight: bold;
-  padding-top: 3.5rem;
-  text-align: center;
+  font-size: 2.5rem;
+  padding-top: 2.5rem;
 }
+
+
 
 
 
@@ -75,10 +163,11 @@
   font-family: inherit;
   font-weight: bold;
   font-size: .8rem;
-  padding: .5rem;transition: .2s;
+  padding: .5rem;
   position: absolute;
   right: 1rem;
-  top: 5.5rem;
+  top: 8.5rem;
+  transition: .2s;
   width: 7rem;
 }
 
@@ -87,6 +176,7 @@
   border-color: #fd585c;
   color: white;
 }
+
 
 .card-btn {
   background-color: #FDFEFF;
@@ -106,7 +196,6 @@
   background-color: #fd585c;
   color: white;
 }
-
 
 .card-header {
   font-size: 2.5rem;
@@ -146,9 +235,11 @@
   margin-bottom: 4rem;
 }
 
-.details {
+.detailsBtn {
   margin-left: 5.5rem;
 }
+
+
 
 .grid {
   display: flex;
@@ -200,51 +291,6 @@
   background-color: white;
 }
 
-.headTable {
-  width: 100%;
-}
-
-table {
-  border-collapse: collapse;
-  margin: 25px 0;
-  font-size: 0.9em;
-  min-width: 400px;
-  border-radius: 5x 5px 0 0;
-  overflow: hidden;
-} 
-
-.headTable thead {
-  padding: 12px 0px;
-  color: white;
-  background-color: #fd585c;
-  color: #ffffff;
-  text-align: left;
-  font-weight: bold;
-} 
-
-.headTable td, th {
-  padding: 12px 15px;
-} 
-
-.headTable tr:nth-child(even) {
-  background-color: #f7f7f7;
-  font-style: oblique;
-  font-size: medium;
-  font-weight: 200;
-} 
-
-.headTable tr:nth-child(odd){
-  font-size: medium;
-  font-style: Lucida;
-}
-
-tr:hover {
-  border-bottom: 1px solid #dddddd;
-}
-
-tbody tr:last-of-type {
-  border-bottom: 2px solid #fd585c;
-}
 
 #wrapper 
 {
@@ -299,11 +345,7 @@ input
     padding: 25px;
 }
 
-.AdoptButton {
-  color: white;
-  background-color: #cf2a27;
-  margin-left: 375px;
-}
+
 
 .detailsheader {
   display: inline-block;
@@ -318,10 +360,7 @@ input
   margin-left: 500px;
 }
 
-.secondheader {
-  display: inline-block;
-  color: 
-}
+
 
 .outline {
   display: inline-block;
@@ -337,10 +376,7 @@ input
   vertical-align: top;
 }
 
-.pic {
-  max-height: 400px;
-  max-width: 400px;
-}
+
 
 .skillheaders {
   display: block;
@@ -355,11 +391,6 @@ input
   display: inline-block;
 }
 
-.addpetbutton {
-  color: white;
-  background-color: #2b78e4;
-  width: 100px;
-}
 
 .edit {
   display: inline;
@@ -383,13 +414,6 @@ input
   font-size: 3rem;
 }
 
-.boxDetails {
-  margin-top: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  
-}
 
 img {
   max-width: 100%;
@@ -399,14 +423,7 @@ img {
   flex-basis: 40%;
 }
 
-.petDetails {
-  font-size: 20px;
-  padding-left: 20px;
-}
 
-.type {
-  padding: 5px;
-} 
 
 .map {
   width: 400px;

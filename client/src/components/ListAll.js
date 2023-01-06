@@ -45,7 +45,7 @@ const ListAll = (props) => {
                                                 <img src={pet.image} class="card-img" />
                                                 <div class="card-content">
                                                     <h1 class="card-header">{pet.name}</h1>
-                                                    <Link to={`/pet/${pet._id}`}><button class="card-btn details">Details</button></Link>   <Link to={`/pet/${pet._id}/edit`}><button class="card-btn">Edit</button></Link> 
+                                                    <Link to={`/pet/${pet._id}`}><button class="card-btn detailsBtn">Details</button></Link>   <Link to={`/pet/${pet._id}/edit`}><button class="card-btn">Edit</button></Link> 
                                                 </div>
                                             </div>
                                         </div>
