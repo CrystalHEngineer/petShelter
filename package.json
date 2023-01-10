@@ -4,9 +4,9 @@
     "description": "",
     "scripts": {
         "test": "echo \"No test specified\" && exit 1",
-        "start": "concurrently \"node server/server.js\" \"cd client && npm start\"",
-        "client": "cd client && npm start",
-        "dev": "concurrently \"node server/server.js\" \"cd client && npm start\""
+        "start": "cd server && node server.js",
+        "build": "npm --prefix client run build",
+        "postinstall": "npm run build"
     },
     "repository": {
         "type": "git",
