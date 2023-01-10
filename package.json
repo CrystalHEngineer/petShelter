@@ -5,6 +5,7 @@
     "scripts": {
         "test": "echo \"No test specified\" && exit 1",
         "start": "cd server && node server.js",
+        "dev": "cd server && nodemon server.js",
         "build": "npm --prefix client run build",
         "postinstall": "npm run build"
     },
