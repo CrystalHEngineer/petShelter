@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import {Link} from 'react-router-dom';
 import axios from 'axios';
+import { URLBASE } from '../consts';
 
 
 const ListAll = (props) => {
     const [allPets, setAllPets] = useState([]);
     useEffect(() => {
-        axios.get("http://localhost:8000/pet")
+        axios.get(URLBASE + "pet")
             .then((res) => {
                 console.log(res.data);
                 setAllPets(res.data);

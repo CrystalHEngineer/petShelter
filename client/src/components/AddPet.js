@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import {Link, Redirect} from 'react-router-dom';
 import axios from 'axios';
+import { URLBASE } from '../consts';
 
 const AddPet = (props) => {
     const [name, setName] = useState("");
@@ -17,7 +18,7 @@ const AddPet = (props) => {
 
         console.log("I'm trying to create a pet.");
 
-        axios.post("http://localhost:8000/pet", {
+        axios.post(URLBASE + "pet", {
             name: name,
             type: type,
             description: description,

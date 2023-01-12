@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import {Link, Redirect} from 'react-router-dom';
 import axios from 'axios';
+import { URLBASE } from '../consts';
 
 const Edit = (props) => {
     const [name, setName] = useState("");
@@ -15,7 +16,7 @@ const Edit = (props) => {
 
 
     useEffect(() => {
-        axios.get('http://localhost:8000/pet/' + props.match.params.id)
+        axios.get(URLBASE + 'pet/' + props.match.params.id)
             .then((res) => {
                 console.log(res.data);
 
@@ -36,7 +37,7 @@ const Edit = (props) => {
     const submitHandler = (e) => {
         e.preventDefault();
 
-        axios.put("http://localhost:8000/pet/" + props.match.params.id, {
+        axios.put(URLBASE + "pet/" + props.match.params.id, {
             name: name,
             type: type,
             description: description,

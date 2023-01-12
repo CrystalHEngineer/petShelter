@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import {Link} from 'react-router-dom';
 import axios from 'axios';
+import { URLBASE } from '../consts';
 
 const Details = (props) => {
     const [pet, setPet] = useState({});
@@ -8,7 +9,7 @@ const Details = (props) => {
     console.log(pet);
     console.log(props);
     useEffect(() => {
-        axios.get('http://localhost:8000/pet/' + props.match.params.id) 
+        axios.get(URLBASE + 'pet/' + props.match.params.id) 
             .then((res) => {
                 console.log(res);
                 let pet = res.data;
@@ -22,7 +23,7 @@ const Details = (props) => {
     }, []);
 
     const payment = (petId) => {
-        axios.get(`http://localhost:8000/pet/${props.match.params.id}/payment`)
+        axios.get(URLBASE + `pet/${props.match.params.id}/payment`)
             // .then((res) => {
             //     console.log(res.data);
             //     console.log("pet ID: " + petId);
