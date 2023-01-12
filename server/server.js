@@ -17,10 +17,10 @@ app.get("/", (req, res) => {
 });
 app.use(express.static(path.join(__dirname, "..", "client", "build")));
 
-require('./config/mongoose.config');
+
+const connectToDB = require('./config/mongoose.config');
 
 require('./routes/pet.routes')(app);
 
 console.log("Hellooooooo");
-
-app.listen(port, () => console.log("Listening on port: " + port));
+connectToDB().then(() => app.listen(port, () => console.log("Listening on port: " + port)));

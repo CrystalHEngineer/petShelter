@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const db_name = "pet";
 
-mongoose.connect("mongodb://localhost/" + db_name, {
+module.exports = () => mongoose.connect(process.env.mongoDB, { 
     useNewUrlParser: true,
     useUnifiedTopology: true,
 })
