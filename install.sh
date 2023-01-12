@@ -2,4 +2,4 @@ cd server
 npm install
 cd ..
 cd client
-npm install
+npm install --legacy-peer-deps
