@@ -7,7 +7,7 @@
         "start": "cd server && node server.js",
         "dev": "cd server && nodemon server.js",
         "build": "npm --prefix client run build",
-        "postinstall": "npm run build"
+        "postinstall": "bash install.sh"
     },
     "repository": {
         "type": "git",
