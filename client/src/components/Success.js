@@ -1,6 +1,6 @@
 import React from 'react'
 import { GoogleMap, LoadScript, Marker, DirectionsService, DirectionsRenderer } from '@react-google-maps/api';
-import {GOOGLE_MAPS} from '../../src/secrets';
+import {GOOGLE_MAPS} from '../../src/GoogleMap';
 
 
 function Success() {
