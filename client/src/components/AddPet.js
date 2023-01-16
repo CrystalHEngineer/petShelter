@@ -7,7 +7,7 @@ const AddPet = (props) => {
     const [name, setName] = useState("");
     const [type, setType] = useState("");
     const [description, setDescription] = useState("");
-    const [skill, setSkill] = useState("");
+    // const [skill, setSkill] = useState("");
     const [errs, setErrs] = useState({});
     const [image, setImage] = useState("");
     console.log("Trying to show new.")
@@ -22,7 +22,7 @@ const AddPet = (props) => {
             name: name,
             type: type,
             description: description,
-            skill: skill,
+            // skill: skill,
             image: image
         })
             .then((res) => {
@@ -41,16 +41,16 @@ const AddPet = (props) => {
     }
 
     return (
-        <div>
-            <h1 className="detailsheader">Pet Shelter</h1>
-            <Link to={`/pet`} className="linkspace">back to home</Link>
-            <h2>Know a pet needing a home?</h2>
-            <form onSubmit={submitHandler}>
-                <div>
-                    <div className="new">
+        <div className="container">
+            <div className="addPetForm">
+
+                <h2 className="addPetHeader">Know A Pet Needing A Home?</h2>
+                <form onSubmit={submitHandler}>
+                
+                    
                         <div>
-                            <label>Pet Name: </label>
-                                <input type="text"
+                            <label className="addPetLabel">Pet Name: </label>
+                                <input className="addPetInput" type="text"
                                     name="name"
                                     value={name}
                                     onChange={(e) => setName (e.target.value)} />
@@ -60,9 +60,11 @@ const AddPet = (props) => {
                                             :null
                                     }
                         </div>
+
+
                         <div>
-                            <label>Pet Type: </label>
-                                <input type="text"
+                            <label className="addPetLabel">Pet Type: </label>
+                                <input className="addPetInput" type="text"
                                     name="type"
                                     value={type}
                                     onChange={(e) => setType (e.target.value)} />
@@ -72,9 +74,11 @@ const AddPet = (props) => {
                                             :null
                                     }
                         </div>
+
+
                         <div>
-                            <label>Pet Description: </label>
-                            <input type="text"
+                            <label className="addPetLabelDesc">Pet Description: </label>
+                            <input className="addPetInput" type="text"
                                 name="description"
                                 value={description}
                                 onChange={(e) => setDescription (e.target.value)} />
@@ -84,9 +88,11 @@ const AddPet = (props) => {
                                         :null
                                 }
                         </div>
+
+
                         <div>
-                            <label>Pet Photo: </label>
-                            <input type="text"
+                            <label className="addPetLabel">Pet Photo: </label>
+                            <input className="addPetInput" type="text"
                             name="image"
                             value={image}
                             placeholder="Paste photo link here."
@@ -97,26 +103,15 @@ const AddPet = (props) => {
                                     :null
                             }
                         </div>
-                    </div>
-                    <div className="new">
-                        <div>
-                            <label>Skills (Optional): </label>
-                            <input type="text"
-                                name="skill1"
-                                value={skill}
-                                onChange={(e) => setSkill (e.target.value)} />
-                                {
-                                    errs.skill1 ? 
-                                        <span>{errs.skill1.message}</span>
-                                        :null
-                                }
-                        </div>
-                    </div>
+
+
+                    
                     <div>
-                        <button className="addpetbutton" type="submit">Add Pet</button>
+                        <button className="addPetButton" type="submit">Add Pet</button>
                     </div>
-                </div>
-            </form>
+            
+                </form>
+            </div>
         </div>
     )
 };

@@ -52,18 +52,19 @@ const Details = (props) => {
         <section>
         <div className="container">
 
-            <div className="boxDetails">
+            <div className="boxPop">
 
                     
 
 
-                    <div className="petDetails">
-                        <img className="detailsPic" src={pet.image}/>
+                    <div className="petDetailsLeft">
                         <h2 className="detailsHeader">Hi! My name is {pet.name}</h2>
+                        <img className="detailsPic" src={pet.image}/>
+                    </div>
+                    <div className="petDetailsRight">
                         <p className="detailsDescription">{pet.description}</p> 
                         <Link   to={`/pet/${pet._id}/payment`}><button className="adoptBtn">Adopt {pet.name}</button></Link>
                     </div>
-                    
 
                 </div>
 

@@ -1,7 +1,7 @@
 .navbar {
     align-items: center;
     background-color: #060b26;
-    color: white;
+    color: #FDFEFF;
     display: flex;
     height: 8rem;
     justify-content: start;
@@ -39,18 +39,20 @@
 }
 
 .nav-text {
+    align-items: center;
+    color: #FDFEFF;
     display: flex;
     justify-content: start;
-    align-items: center;
-    padding: 8px 0px 8px 16px;
-    list-style: none;
     height: 6rem;
+    list-style: none;
+    padding: 8px 0px 8px 16px;
+    
 }
 
 .nav-text a {
     text-decoration: none;
     color: #f5f5f5;
-    font-size: 18px;
+    font-size: 20px;
     width: 95%;
     height: 100%;
     display: flex;

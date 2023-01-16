@@ -63,22 +63,22 @@ export default function PaymentForm(){
 }
 
     return(
-        <>
+        <div className="container">
         {!success ?
-        <form onSubmit={handleSubmit}>
-            <fieldset className="FormGroup">
+        <form className="addPetForm" onSubmit={handleSubmit}>
+            <fieldset className="cardInput">
                 <div className="FormRow">
 
                     <CardElement options={CARD_OPTIONS}/>
                 </div>
             </fieldset>
-            <button>Pay</button>
+            <button className="addPetButton">Pay</button>
         </form>
         :
         <div>
             <Redirect to='/pet/success' />
         </div>
         }
-        </>
+        </div>
     )
 }

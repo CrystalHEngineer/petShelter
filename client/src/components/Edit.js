@@ -57,15 +57,16 @@ const Edit = (props) => {
     }
 
     return (
-        <div>
-            <h1 className="detailsheader">Pet Shelter</h1>
-            <Link to={`/pet`} className="linkspace">back to home</Link>
-            <h2>Edit {pet.name}</h2>
+        <div className="container">
+            <div className="addPetForm">
+
+            <h2 className="addPetHeader">Edit {pet.name}</h2>
             <form onSubmit={submitHandler}>
-                <div className="box1">
-                    <div className="edit">
-                        <label>Pet Name: </label>
-                        <input type="text"
+
+            
+                    <div>
+                        <label className="addPetLabel">Pet Name: </label>
+                        <input className="addPetInput" type="text"
                             name="name"
                             value={name}
                             onChange={(e) => setName (e.target.value)} />
@@ -75,9 +76,11 @@ const Edit = (props) => {
                                     :null
                             }
                     </div>
+
+
                     <div className="edit">
-                        <label>Pet type: </label>
-                        <input type="text"
+                        <label className="addPetLabel">Pet type: </label>
+                        <input className="addPetInput" type="text"
                             name="type"
                             value={type}
                             onChange={(e) => setType (e.target.value)} />
@@ -87,9 +90,11 @@ const Edit = (props) => {
                                     :null
                             }
                     </div>
+
+
                     <div className="edit">
-                        <label>Pet Description: </label>
-                        <input type="text"
+                        <label className="addPetLabel">Pet Description: </label>
+                        <input className="addPetInput" type="text"
                             name="description"
                             value={description}
                             onChange={(e) => setDescription (e.target.value)} />
@@ -99,9 +104,11 @@ const Edit = (props) => {
                                     :null
                             }
                     </div>
+
+
                     <div className="edit">
-                            <label>Pet Photo: </label>
-                            <input type="text"
+                            <label className="addPetLabel">Pet Photo: </label>
+                            <input className="addPetInput" type="text"
                             name="image"
                             value={image}
                             placeholder="Paste photo link here."
@@ -111,27 +118,15 @@ const Edit = (props) => {
                                     <span>{errs.image.message}</span>
                                     :null
                             }
-                        </div>
-                </div>
-                <div className="box1">
-                    <div>
-                        <h6>Skills (Optional:)</h6>
-                        <label className="skillheaders">Skills: </label>
-                        <input type="text"
-                            name="skill"
-                            value={skill}
-                            onChange={(e) => setSkill (e.target.value)} />
-                            {
-                                errs.skill ? 
-                                    <span>{errs.skill.message}</span>
-                                    :null
-                            }
                     </div>
-                </div>
-                <div>
-                    <button className="addpetbutton" type="submit">Edit Pet</button>
-                </div>
-            </form>
+
+
+                    <div>
+                        <button className="addPetButton" type="submit">Edit Pet</button>
+                    </div>
+
+                </form>
+            </div>
         </div>
     )
 };

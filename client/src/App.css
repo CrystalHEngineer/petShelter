@@ -8,10 +8,147 @@
 }
 
 
+/* ------ ABOUT -------- */
+
+.about {
+  background-color: #060b26;
+  color: #FDFEFF;
+  margin-top: 2%;
+  padding: 5%;
+  text-align: center;
+  width: 100%;
+}
+
+.aboutHeader {
+  color: #fd585c;
+  font-size: 4rem;
+  margin-bottom: 5%;
+}
+
+.aboutPara {
+  font-size: 2rem;
+  line-height: 2;
+}
+
+/* ------ ADD PET ------- */
+
+.addPetButton {
+  background-color: #FDFEFF;
+  border: .2rem solid;
+  border-radius: 0.4rem;
+  color: #fd585c;
+  font-family: inherit;
+  font-weight: bold;
+  font-size: .8rem;
+  margin-top: 2%;
+  padding: .5rem;
+  transition: .2s;
+  width: 7rem;
+}
+
+.addPetButton:hover {
+  background-color: #fd585c;
+  border-color: #FDFEFF;
+  color: white;
+}
+
+.addPetForm {
+  background-color: #060b26;
+  color: white;
+  margin-top: 5%;
+  padding: 2%;
+  text-align: center;
+  width: 40%;
+}
+
+.addPetHeader {
+  font-size: 2.2rem;
+  margin-bottom: 5%;
+}
+
+.addPetInput {
+  border: 2px solid #fd585c;
+  border-radius: 4px;
+  margin-bottom: 5%;
+  margin-left: 12%;
+  margin-top: 5%;
+  padding: 1%;
+  width: 75%;
+}
+
+.addPetLabelDesc {
+  font-size: 1.2rem;
+}
+
+.addPetLabel {
+  font-size: 1.2rem;
+}
+
+
+
+
+/* ------ CONTACT ------- */
+
+
+.contactBtn{
+  background-color: #FDFEFF;
+  border: .2rem solid;
+  border-radius: 0.4rem;
+  color: #fd585c;
+  font-family: inherit;
+  font-weight: bold;
+  font-size: .8rem;
+  margin-top: 7%;
+  padding: .5rem;
+  transition: .2s;
+  width: 7rem;
+}
+
+.contactBtn:hover {
+  background-color: #fd585c;
+  border-color: #FDFEFF;
+  color: white;
+}
+
+.contactForm {
+  background-color: #060b26;
+  color: white;
+  margin-top: 5%;
+  padding: 2% 0 2% 0;
+  text-align: center;
+  width: 40%;
+}
+
+.contactHeader {
+  font-size: 2.5rem;
+  margin-bottom: 5%;
+}
+
+.formInput {
+  border: 2px solid #fd585c;
+  border-radius: 4px;
+  margin-bottom: 5%;
+  margin-left: 12%;
+  margin-top: 5%;
+  padding: 1%;
+  width: 75%;
+}
+
+.formLabel {
+  font-size: 1.2rem;
+}
+
+.formMessageInput {
+  border: 2px solid #fd585c;
+  border-radius: 4px;
+  margin-top: 5%;
+  width: 75%;
+}
 
 
 
 /* ------ DETAILS ------ */
+
 
 .adoptBtn {
   background-color: #FDFEFF;
@@ -21,11 +158,12 @@
   font-family: inherit;
   font-weight: bold;
   font-size: .8rem;
+  left: 65%;
   padding: .5rem;
+  position: relative;
   transition: .2s;
+  top: 14em;
   width: 7rem;
-  margin-left: 28rem;
-  margin-top: 18rem;
 }
 
 .adoptBtn:hover {
@@ -34,42 +172,84 @@
   color: white;
 }
 
-.boxDetails {
-  
-  display: flex;
+.boxPop {
+  align-items: center;
   border-radius: 0.4rem;
-  box-shadow: 4rem 4rem 4rem rgba(0, 0, 0, 0.1);
+  box-shadow: 0rem 27px 87px rgba(0,0,0,0.37);
   cursor: pointer;
-  height: 38rem;
-  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 38rem;
+  max-height: 300vh;
+  margin: 50px;
   transition: 0.2s;
-  width: 70rem;
+  width:80%;
 }
 
-.boxDetails:hover {
+.boxPop:hover {
   transform: translateY(-0.5%);
-  box-shadow: 0 4rem 8rem rgba(0, 0, 0, 0.5);
+  box-shadow: 0rem 27px 87px rgba(0, 0, 0, 0.7);
 }
 
 
 .detailsDescription {
   font-size: 1.5rem;
-  margin-left: 3rem;
-  margin-top: 5rem;
+  padding-right: 2em;
+  text-align: center;
 } 
 
 .detailsHeader {
-  font-size: 3rem;
-  margin-left: 1.5rem;
-  margin-top: 4.5rem;
+  font-size: 300%;
+  margin-left: .6em;
 }
 
 .detailsPic {
-  margin-left: 2rem;
-  max-height: 30rem;
-  margin-top: 4.5rem;
-  max-width: 32rem;
+  display: block;
+  margin-left: 5%;
+  max-height: 25em;
+  margin-top: 1.5em;
+  max-width: 90%;
+  min-height: 25em;
+  min-width: 90%;
+  object-fit: cover;
+  position: relative;
 }
+
+.petDetailsLeft {
+  flex: 1%;
+}
+
+.petDetailsRight {
+  flex: 1%;
+}
+
+@media screen and (max-width: 1068px) {
+
+
+  .adoptBtn{
+    top:auto;
+    left: 43%;
+  } 
+  
+  .petDetailsRight, .petDetailsLeft{
+    flex: 100%;
+  }
+
+}
+
+@media screen and (max-width: 800px) {
+
+  .adoptBtn{
+    top:auto;
+    left: 40%;
+  } 
+
+  .petDetailsLeft, .petDetailsRight{
+    flex: 100%;
+  }
+}
+
+
 
 
 
@@ -223,9 +403,9 @@
   max-width: 1300px;
   margin: auto;
   width: 100%;
-  /* display: flex;
+  display: flex;
   align-items: center;
-  justify-content: center; */
+  justify-content: center;
 }
 
 .dashHeader {
@@ -269,6 +449,38 @@
   flex-direction: column;
   align-items: center;
 }
+
+
+
+/* ------ PAYMENT FORM ------- */ 
+
+  .cardInput {
+    background-color: #FDFEFF;
+    border: 2px solid #fd585c;
+    border-radius: 4px;
+    margin-bottom: 5%;
+    margin-left: 12%;
+    margin-top: 5%;
+    padding: 1%;
+    width: 75%;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
