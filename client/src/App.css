@@ -280,18 +280,27 @@
   color: #fd585c;
 }
 
+.container {
+  max-width: 1300px;
+  margin: auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .welcome {
   background-image: url('assets/dog.jpg');
+  background-position: center;
   background-repeat: no-repeat;
-  background-size: 100% 100%;
-  backdrop-filter: blur(2px);
-  height: 100vh;
+  background-size: cover;
+  height: 90vh;
   position: relative;
   text-align: center;
   width: 100%;
 }
 
-.welcome:before {
+/* .welcome:before {
   content: "";
   position: absolute;
   width : 100%;
@@ -307,26 +316,28 @@
   -webkit-filter: blur(1.5px);
   -o-filter     : blur(1.5px);
 
-}
+} */
 
 .welcome-hs {
   left: 50%;
-  position: absolute;
-  transform: translate(-50%, -40%);
+  position: relative;
+  transform: translate(-50%, -45%);
   top: 45%;
+  width: 60%;
 }
 
 
 .welcomeHeader {
   color:  #fd585c;
-  font-size: 4rem;
+  font-size: 6rem;
+  font-weight: 900;
 } 
 
 
 .welcomeDescription {
   color: #FDFEFF;
-  font-size: 2.5rem;
-  padding-top: 2.5rem;
+  font-size: 3em;
+  padding-top: 3rem;
 }
 
 
@@ -594,10 +605,6 @@ input
   display: block;
 }
 
-.container {
-  border-color: black;
-  border-radius: 10%;
-}
 
 .new {
   display: inline-block;

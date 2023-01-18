@@ -6,6 +6,7 @@
     height: 8rem;
     justify-content: start;
     text-align: right;
+    z-index: 5;
 }
 
 .title {
