@@ -257,7 +257,7 @@
 
 
 .buttonContainer {
-  padding: 4rem;
+  padding: 1.5rem;
   text-align: center;
 }
 
@@ -265,14 +265,14 @@
   padding: 1rem;
   font-family: inherit;
   font-weight: bold;
-  font-size: 1.7rem;
+  font-size: 1.3rem;
   margin: 1rem;
   border: 4px solid;
   color: #FDFEFF;
   background-color: #fd585c;
   border-radius: 0.4rem;
   transition: .2s;
-  width: 15rem;
+  width: 10rem;
 }
 
 .dashboardButton:hover {
@@ -294,7 +294,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 90vh;
+  height: 100vh;
   position: relative;
   text-align: center;
   width: 100%;
@@ -320,27 +320,33 @@
 
 .welcome-hs {
   left: 50%;
-  position: relative;
-  transform: translate(-50%, -45%);
-  top: 45%;
-  width: 60%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
 }
 
 
 .welcomeHeader {
   color:  #fd585c;
-  font-size: 6rem;
+  font-size: 5.5rem;
   font-weight: 900;
 } 
 
 
 .welcomeDescription {
   color: #FDFEFF;
-  font-size: 3em;
-  padding-top: 3rem;
+  font-size: 2.5em;
+  padding-top: 1.5rem;
 }
 
+@media screen and (max-width: 350px) {
 
+  .portfolio-sm-img {
+    height: 60vh;
+  }
+
+}
 
 
 
